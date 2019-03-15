@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt-get update  && 
+sudo apt-get update  >/dev/null && 
 sudo apt-get install -y wget git \
                         build-essential \
                         squashfs-tools \
@@ -10,7 +10,7 @@ sudo apt-get install -y wget git \
                         automake \
                         autoconf \
                         uuid-dev \
-                        libssl-dev
+                        libssl-dev >/dev/null
 
 
 #sudo sed -i -e 's/^Defaults\tsecure_path.*$//' /etc/sudoers

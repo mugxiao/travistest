@@ -3,32 +3,39 @@ From: continuumio/anaconda3:5.1.0
 #Python version: 3.6.4 
 
 %post
-#apt-get install build-essential
+export PATH=/opt/conda/bin:$PATH
 
-which conda
-which pip
+#DRYRUN=--dry-run
+DRYRUN=
 
+#update
+apt-get update
 conda update conda
-pip install --update pip
+pip install --upgrade pip
 
-#/opt/conda/bin/conda update conda
-#/opt/conda/bin/pip install --update pip
+#tensorflow
+conda install $DRYRUN tensorflow==1.12.0
 
-#/opt/conda/bin/conda install tensorflow==1.12.0
+#pytorch
+conda install $DRYRUN -c pytorch pytorch-cpu==1.0.1
+conda install $DRYRUN -c pytorch torchvision-cpu=0.2.1
 
-#/opt/conda/bin/pip install torch==1.0.1
-#/opt/conda/bin/pip install torchvision==0.2.2
+#theano
+apt-get install -y build-essential
+conda install $DRYRUN blas theano==1.0.3
 
-#/opt/conda/bin/conda install theano==1.0.3
+#mxnet
+#install opencv automatically
+conda install $DRYRUN mxnet==1.1.0
 
-#/opt/conda/bin/pip install mxnet==1.4.0
-#/opt/conda/bin/pip install dm-sonnet==1.29
+#sonnet
+#conda install $DRYRUN -c hcc dm-sonnet==1.27
 
-#apt-get install openmpi-bin
-#export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/openmpi/lib:$LD_LIBRARY_PATH
-#/opt/conda/bin/pip install cntk==2.6
+##opencv
+#conda install $DRYRUN -c anaconda opencv==3.4.2
 
-#/opt/conda/bin/pip install niftynet==0.5.0
-#/opt/conda/bin/pip install opencv-python==4.0.0.21
-#/opt/conda/bin/pip install SimpleITK==1.2.0
+#simpleitk
+conda install $DRYRUN -c simpleitk simpleitk==1.2.0
 
+#niftynet
+pip install niftynet==0.5.0

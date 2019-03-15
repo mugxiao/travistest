@@ -141,7 +141,8 @@ if [ -f "$recipe" ]; then
         # Example testing using run (you could also use test command)
 
         echo "Testing the image... Marco!"
-        singularity exec $imagefile echo "Polo!"
+        #singularity exec $imagefile echo "Polo!"
+        singularity exec $imagefile python -W ignore -c "import tensorflow as tf; print('TensorFlow version: ' + tf.__version__)"
 
         # Example sregistry commands to push to endpoints
 

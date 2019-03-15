@@ -6,4 +6,4 @@ before_install:
 - /bin/bash .travis/setup.sh
 
 script:
-- singularity -v
+- /bin/bash build.sh Singularity
