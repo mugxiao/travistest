@@ -27,11 +27,11 @@ sudo pip install --upgrade pip
 
 
 # #Install Singularity
-sudo apt-get install singularity-container
+#sudo apt-get install singularity-container
 
-# cd /tmp && \
-#     git clone -b vault/release-2.5 https://www.github.com/sylabs/singularity.git
-#     cd singularity && \
-#     ./autogen.sh && \
-#     ./configure --prefix=/usr/local && \
-#     make && sudo make install
+cd /tmp && \
+    git clone -b vault/release-2.5 https://www.github.com/sylabs/singularity.git
+    cd singularity && \
+    ./autogen.sh && \
+    ./configure --prefix=/usr/local && \
+    make && sudo make install
