@@ -16,13 +16,14 @@ sudo apt-get install -y wget git \
 #sudo sed -i -e 's/^Defaults\tsecure_path.*$//' /etc/sudoers
 
 # Check Python
+sudo pip install --upgrade pip
 
-echo "Python Version:"
-#python --version
-pip install sregistry[all]
-sregistry version
+# echo "Python Version:"
+# #python --version
+# pip install sregistry[all]
+# sregistry version
 
-echo "sregistry Version:"
+# echo "sregistry Version:"
 
 
 # #Install Singularity
