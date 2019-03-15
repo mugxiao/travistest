@@ -1,21 +1,16 @@
 #!/bin/bash
 
-sudo apt-get update 
-
-# Install Singularity
-sudo apt-get install -y singularity-container
-
-
-# wget git \
-#                                                     build-essential \
-#                                                     squashfs-tools \
-#                                                     libtool \
-#                                                     autotools-dev \
-#                                                     libarchive-dev \
-#                                                     automake \
-#                                                     autoconf \
-#                                                     uuid-dev \
-#                                                     libssl-dev
+sudo apt-get update  && 
+sudo apt-get install -y wget git \
+                        build-essential \
+                        squashfs-tools \
+                        libtool \
+                        autotools-dev \
+                        libarchive-dev \
+                        automake \
+                        autoconf \
+                        uuid-dev \
+                        libssl-dev
 
 
 #sudo sed -i -e 's/^Defaults\tsecure_path.*$//' /etc/sudoers
@@ -29,9 +24,10 @@ sregistry version
 
 echo "sregistry Version:"
 
-# cd /tmp && \
-#     git clone -b vault/release-2.5 https://www.github.com/sylabs/singularity.git
-#     cd singularity && \
-#     ./autogen.sh && \
-#     ./configure --prefix=/usr/local && \
-#     make && sudo make install
+#Install Singularity
+cd /tmp && \
+    git clone -b vault/release-2.5 https://www.github.com/sylabs/singularity.git
+    cd singularity && \
+    ./autogen.sh && \
+    ./configure --prefix=/usr/local && \
+    make && sudo make install
