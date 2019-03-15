@@ -20,18 +20,15 @@ sudo pip install --upgrade pip
 
 # echo "Python Version:"
 # #python --version
-# pip install sregistry[all]
-# sregistry version
-
-# echo "sregistry Version:"
-
+sudo pip install sregistry[all]
+sregistry version
+#echo "sregistry Version:"
 
 # #Install Singularity
 #sudo apt-get install singularity-container
-
 cd /tmp && \
     git clone -b vault/release-2.5 https://www.github.com/sylabs/singularity.git
     cd singularity && \
     ./autogen.sh && \
     ./configure --prefix=/usr/local && \
-    make && sudo make install
+    make >/dev/null && sudo make install >/dev/null
