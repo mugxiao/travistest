@@ -29,6 +29,6 @@ sregistry version
 cd /tmp && \
     git clone -b vault/release-2.5 https://www.github.com/sylabs/singularity.git
     cd singularity && \
-    ./autogen.sh && \
-    ./configure --prefix=/usr/local && \
+    ./autogen.sh >/dev/null && \
+    ./configure --prefix=/usr/local >/dev/null && \
     make >/dev/null && sudo make install >/dev/null
