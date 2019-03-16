@@ -4,6 +4,26 @@ Bootstrap: docker
 
 From: continuumio/miniconda:4.5.12
 
+%setup
+sudo apt-get update && sudo apt-get install -y \
+    wget git \
+    build-essential \
+    squashfs-tools \
+    libtool \
+    autotools-dev \
+    libarchive-dev \
+    automake \
+    autoconf \
+    uuid-dev \
+    libssl-dev >/dev/null
+
+#install singularity
+cd /tmp && \
+    git clone -b vault/release-2.5 https://www.github.com/sylabs/singularity.git
+    cd singularity && \
+    ./autogen.sh >/dev/null && \
+    ./configure --prefix=/usr/local >/dev/null && \
+    make >/dev/null && sudo make install >/dev/null
 
 %post
 export PATH=/opt/conda/bin:$PATH
@@ -16,8 +36,8 @@ apt-get update
 conda update conda
 pip install --upgrade pip
 
-echo python -V
-echo pip -V
+python -V
+pip -V
 
 #tensorflow
 conda install $DRYRUN tensorflow==1.12.0

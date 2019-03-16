@@ -20,8 +20,8 @@ sudo pip install --upgrade pip
 
 # echo "Python Version:"
 # #python --version
-sudo pip install sregistry[all]
-sregistry version
+# sudo pip install sregistry[all]
+# sregistry version
 #echo "sregistry Version:"
 
 # #Install Singularity
