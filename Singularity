@@ -29,7 +29,7 @@ conda install $DRYRUN blas theano==1.0.3
 
 #mxnet
 #install opencv automatically
-conda install $DRYRUN mxnet==1.1.0
+#conda install $DRYRUN mxnet==1.1.0
 
 #sonnet
 #conda install $DRYRUN -c hcc dm-sonnet==1.27
@@ -41,4 +41,4 @@ conda install $DRYRUN mxnet==1.1.0
 conda install $DRYRUN -c simpleitk simpleitk==1.2.0
 
 #niftynet
-pip install niftynet==0.5.0
+pip3 install niftynet==0.5.0
