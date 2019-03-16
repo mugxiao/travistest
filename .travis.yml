@@ -8,7 +8,7 @@ before_install:
 script:
 #- /bin/bash .travis/build.sh Singularity
 # build 
-- sudo singularity build Singularity.simg Singularity
+- travis_wait 20 sudo singularity build Singularity.simg Singularity
 # test
 - /bin/bash .travis/test.sh
 # push
