@@ -16,6 +16,9 @@ apt-get update
 conda update conda
 pip install --upgrade pip
 
+echo python -V
+echo pip -V
+
 #tensorflow
 conda install $DRYRUN tensorflow==1.12.0
 
@@ -37,8 +40,11 @@ conda install $DRYRUN blas theano==1.0.3
 ##opencv
 #conda install $DRYRUN -c anaconda opencv==3.4.2
 
+#scikit-learn
+conda install $DRYRUN -c anaconda scikit-learn==0.20.3
+
 #simpleitk
 conda install $DRYRUN -c simpleitk simpleitk==1.2.0
 
 #niftynet
-pip3 install niftynet==0.5.0
+pip install niftynet==0.5.0
