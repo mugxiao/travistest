@@ -2,8 +2,8 @@ language: bash
 dist: xenial
 
 #before_install:
-#- sudo chmod u+x .travis/*.sh
-#- /bin/bash .travis/setup.sh
+- sudo chmod u+x .travis/*.sh
+- /bin/bash .travis/setup.sh
 
 script:
 #- /bin/bash .travis/build.sh Singularity
