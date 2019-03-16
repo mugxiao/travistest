@@ -20,6 +20,7 @@ pip -V
 
 #tensorflow
 conda install $DRYRUN tensorflow==1.12.0
+conda install -c anaconda scikit-image==0.14.2
 
 #pytorch
 conda install $DRYRUN -c pytorch pytorch-cpu==1.0.1
@@ -27,7 +28,7 @@ conda install $DRYRUN -c pytorch torchvision-cpu=0.2.1
 
 #theano
 apt-get install -y build-essential
-conda install $DRYRUN blas theano==1.0.3
+conda install $DRYRUN -c conda-forge theano==1.0.4
 
 #mxnet
 #install opencv automatically
@@ -46,4 +47,8 @@ conda install $DRYRUN -c anaconda scikit-learn==0.20.3
 conda install $DRYRUN -c simpleitk simpleitk==1.2.0
 
 #niftynet
+conda install -c anaconda pyyaml==3.13
 pip install niftynet==0.5.0
+
+
+

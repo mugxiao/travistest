@@ -4,6 +4,8 @@ image=Singularity.simg
 
 # tensorflow: -W ignore: ignore futurewarning
 singularity exec $image python -W ignore -c "import tensorflow as tf; print('TensorFlow version: ' + tf.__version__)" && \
+#scikit-image
+singularity exec $image python -c "import skimage; print('skimage version: ' + skimage.__version__)" && \
 
 # keras
 singularity exec $image python -W ignore -c "import tensorflow.keras as keras;print('Keras version: ' + keras.__version__)" && \
