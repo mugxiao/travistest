@@ -18,10 +18,14 @@ singularity exec $image python -c "import torchvision; print('torchvision versio
 singularity exec $image python -c "import theano;print('theano version: ' + theano.__version__)" && \
 
 #mxnet
-singularity exec $image python -c "import mxnet;print('mxnet version: ' + mxnet.__version__)" && \
+#singularity exec $image python -c "import mxnet;print('mxnet version: ' + mxnet.__version__)" && \
 
 #opencv
 singularity exec $image python -c "import cv2; print('Opencv version: ' + cv2.__version__)" && \
+
+#scikit-learn
+singularity exec $image python -c "import sklearn; print('sklearn version: ' + sklearn.__version__)" && \
+
 
 #simpleitk
 singularity exec $image python -c "import SimpleITK as sitk; print('SimpleITK version: ' +  sitk.Version_VersionString())" && \
