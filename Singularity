@@ -2,7 +2,7 @@ Bootstrap: docker
 #From: continuumio/anaconda3:5.1.0
 #Python version: 3.6.4 
 
-From: continuumio/miniconda:4.5.12
+From: continuumio/miniconda3:4.5.12
 
 %post
 export PATH=/opt/conda/bin:$PATH
