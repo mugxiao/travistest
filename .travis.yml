@@ -9,7 +9,7 @@ script:
 #- /bin/bash .travis/build.sh Singularity
 # build 
 #- travis_wait 40 sudo singularity build Singularity.simg Singularity
-sudo singularity build Singularity.simg Singularity
+- sudo singularity build Singularity.simg Singularity
 # 
 # test and push
 - if [ "$TRAVIS_BRANCH" = "master" ] && [ "$TRAVIS_PULL_REQUEST" = "false" ]; then
