@@ -1,7 +1,8 @@
 Bootstrap: docker
-#From: continuumio/anaconda3:5.1.0
 #Python version: 3.6.4 
+#From: continuumio/anaconda3:5.1.0
 
+#Python version: 3.6.8
 From: continuumio/miniconda3:4.5.4
 
 %post
@@ -29,6 +30,7 @@ conda install $DRYRUN -c pytorch torchvision-cpu=0.2.1
 #theano
 apt-get install -y build-essential
 conda install $DRYRUN -c conda-forge theano==1.0.4
+conda install mkl-service
 
 #mxnet
 #install opencv automatically
