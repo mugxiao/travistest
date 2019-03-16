@@ -37,7 +37,7 @@ conda install $DRYRUN blas theano==1.0.3
 #conda install $DRYRUN -c hcc dm-sonnet==1.27
 
 ##opencv
-#conda install $DRYRUN -c anaconda opencv==3.4.2
+conda install $DRYRUN -c anaconda opencv==3.4.2
 
 #scikit-learn
 conda install $DRYRUN -c anaconda scikit-learn==0.20.3
